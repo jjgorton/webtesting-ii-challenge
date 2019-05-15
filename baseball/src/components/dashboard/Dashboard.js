@@ -5,10 +5,18 @@ class Dashborad extends React.Component {
 		return (
 			<div className="dash-container">
 				<h2>Dashboard</h2>
-				<button onClick={this.props.ballCount}>ball</button>
-				<button onClick={this.props.strikeCount}>strike</button>
-				<button onClick={this.props.foulCount}>foul</button>
-				<button onClick={this.props.hitCount}>hit</button>
+				<button data-testid="balls" onClick={this.props.ballCount}>
+					ball
+				</button>
+				<button data-testid="strikes" onClick={this.props.strikeCount}>
+					strike
+				</button>
+				<button data-testid="foul" onClick={this.props.foulCount}>
+					foul
+				</button>
+				<button data-testid="hit" onClick={this.props.hitCount}>
+					hit
+				</button>
 			</div>
 		);
 	}

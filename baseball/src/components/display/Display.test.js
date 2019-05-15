@@ -11,12 +11,18 @@ describe('<Display />', () => {
 	});
 
 	it('displays balls', () => {
-		const { getByText } = render(<Display />);
-		getByText(/balls:/i);
+		const { getByText } = render(<Display balls="0" />);
+		getByText(/balls: 0/i);
 	});
 
+	// it('displays balls', () => {
+	// 	const { getByTestId, getByText } = render(<Display />);
+	// 	const elem = getByTestId('balls');
+	// 	getByText(/balls: 0/i);
+	// });
+
 	it('displays strikes', () => {
-		const { getByText } = render(<Display />);
-		getByText(/strikes:/i);
+		const { getByText } = render(<Display strikes="0" />);
+		getByText(/strikes: 0/i);
 	});
 });
